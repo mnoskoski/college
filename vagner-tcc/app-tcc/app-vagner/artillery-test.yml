@@ -1,0 +1,37 @@
+config:
+  target: 'http://localhost/mp'
+  phases:
+    - duration: 5
+      arrivalRate: 10
+  defaults:
+    headers:
+      x-timestamp: '2020-11-07T11:12:13.987Z'
+scenarios:
+  - flow:
+    - post:
+        url: "/first-steps"
+        json:
+          partnerId: "{{$randomNumber(100000,999999)}}"
+          clientType: C
+          releaseDate: '2020-11-20'
+          totalValue: 6101.99
+          rate: 4.9848482
+          quotaAmount: 6
+          firstDueDate: '2020-11-25'
+          iofValue: 174.34
+          commission: 244.08
+          cessionValue: 5683.57
+          quotaValue: 1016.9983
+          client:
+            document: '28072483650'
+            nameOrCompanyName: COMPANY 4630
+            postalCode: 85977995
+            address: ADDRESS
+            district: DISTRICT
+            city: CITY
+            state: ST
+            phone: 1234-5678
+            email: email
+            score: 678
+            rating: BC
+            billing: 7366

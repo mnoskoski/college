@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
+    image: docker.io/mnoskoski/app-vagner
+    container_name: mp
+    volumes:
+      - ./app:/app
+    ports:
+      - 8091:80
+    environment:
+      NODE_ENV: Development
+      PORT: 80
